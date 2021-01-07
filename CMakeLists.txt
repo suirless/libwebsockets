@@ -100,7 +100,7 @@ option(LWS_ROLE_DBUS "Compile with support for DBUS" OFF)
 option(LWS_ROLE_RAW_PROXY "Raw packet proxy" OFF)
 option(LWS_ROLE_RAW_FILE "Compile with support for raw files" ON)
 option(LWS_WITH_HTTP2 "Compile with server support for HTTP/2" ON)
-option(LWS_WITH_LWSWS "Libwebsockets Webserver" OFF)
+option(LWS_WITH_LWSWS "Libwebsockets Webserver" ON)
 option(LWS_WITH_CGI "Include CGI (spawn process with network-connected stdin/out/err) APIs" OFF)
 option(LWS_IPV6 "Compile with support for ipv6" OFF)
 option(LWS_UNIX_SOCK "Compile with support for UNIX domain socket if OS supports it" ON)
@@ -122,7 +122,7 @@ option(LWS_WITH_GTK "Enable gtk example" OFF)
 option(LWS_WITH_FTS "Full Text Search support" OFF)
 option(LWS_WITH_SYS_ASYNC_DNS "Nonblocking internal IPv4 + IPv6 DNS resolver" OFF)
 option(LWS_WITH_SYS_NTPCLIENT "Build in tiny ntpclient good for tls date validation and run via lws_system" OFF)
-option(LWS_WITH_SYS_DHCP_CLIENT "Build in tiny DHCP client" OFF)
+option(LWS_WITH_SYS_DHCP_CLIENT "Build in tiny DHCP client" ON)
 option(LWS_WITH_HTTP_BASIC_AUTH "Support Basic Auth" ON)
 option(LWS_WITH_HTTP_UNCOMMON_HEADERS "Include less common http header support" ON)
 option(LWS_WITH_SYS_STATE "lws_system state support" ON)
@@ -153,7 +153,7 @@ option(LWS_WITH_SECURE_STREAMS_AUTH_SIGV4 "Secure Streams Auth support for AWS S
 # have internet routing, then you can still run a subset of tests with CTest / make
 # test that only does local tests by disabling this option.
 #
-option(LWS_CTEST_INTERNET_AVAILABLE "CTest will performs tests that need the Internet" ON)
+option(LWS_CTEST_INTERNET_AVAILABLE "CTest will performs tests that need the Internet" OFF)
 
 #
 # TLS library options... all except mbedTLS are basically OpenSSL variants.
@@ -190,7 +190,7 @@ option(LWS_WITH_DRIVERS "With generic drivers for gpio, i2c, display etc" OFF)
 # Static / Dynamic build options
 #
 option(LWS_WITH_STATIC "Build the static version of the library" ON)
-option(LWS_WITH_SHARED "Build the shared version of the library" ON)
+option(LWS_WITH_SHARED "Build the shared version of the library" OFF)
 option(LWS_LINK_TESTAPPS_DYNAMIC "Link the test apps to the shared version of the library. Default is to link statically" OFF)
 option(LWS_STATIC_PIC "Build the static version of the library with position-independent code" OFF)
 #
